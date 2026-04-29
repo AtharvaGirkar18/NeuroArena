@@ -1,0 +1,45 @@
+*.iml
+.gradle
+.idea/
+local.properties
+.DS_Store
+Thumbs.db
+
+# Build outputs
+build/
+app/build/
+
+# External native build
+.externalNativeBuild/
+.cxx/
+
+# Android Studio captures
+captures/
+
+# Generated
+**/generated/
+**/build/
+
+# Kotlin/Java artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# Keystores (do not commit)
+*.jks
+*.keystore
+
+# Gradle
+/.gradle/
+gradle-app.setting
+
+# NDK
+obj/
+*.so
+
+# Local env
+*.env

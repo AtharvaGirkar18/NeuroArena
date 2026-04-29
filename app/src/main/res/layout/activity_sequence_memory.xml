@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D89C8">
+
+    <FrameLayout
+        android:id="@+id/panelIntro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2D89C8"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                android:text="🔁"
+                android:textSize="60sp"
+                android:gravity="center"
+                android:contentDescription="Sequence Memory Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sequence Memory Test"
+                android:textSize="32sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Memorize the pattern."
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_marginBottom="40dp" />
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:textSize="18sp"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="16dp"
+                android:backgroundTint="#F2C94C" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/panelGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2D89C8"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Level 1"
+                    android:textSize="24sp"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvLives"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Length 1"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPhaseStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Memorize the pattern"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:paddingBottom="20dp" />
+
+            <GridLayout
+                android:id="@+id/gridTiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/panelGameOver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#2D89C8"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Over"
+                android:textSize="32sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:id="@+id/tvGameOverLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reached Level 1"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:id="@+id/tvGameOverBest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Best: Level 1"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:layout_marginBottom="40dp" />
+
+            <Button
+                android:id="@+id/btnTryAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Try Again"
+                android:textSize="18sp"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="16dp"
+                android:backgroundTint="#F2C94C" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

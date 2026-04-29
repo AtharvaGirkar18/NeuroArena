@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/numberMemoryRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D89C8"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:id="@+id/panelIntro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧠"
+            android:textSize="56sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Number Memory"
+            android:textColor="#FFFFFF"
+            android:textSize="68sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="The average person can remember 7 numbers at once. Can you do more?"
+            android:textColor="#E6F2FB"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnStartNumberMemory"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:backgroundTint="#F2C94C"
+            android:text="Start"
+            android:textAllCaps="false"
+            android:textColor="#1E2A3A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panelMemorize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvMemorizeNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="234"
+            android:textColor="#FFFFFF"
+            android:textSize="84sp"
+            android:textStyle="normal" />
+
+        <ProgressBar
+            android:id="@+id/pbMemorizeTimer"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="140dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progress="100"
+            android:progressTint="#FFFFFF"
+            android:progressBackgroundTint="#2A74B0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panelInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What was the number?"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Press enter to submit"
+            android:textColor="#A8D0ED"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/etAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="#1B6BAF"
+            android:gravity="center"
+            android:hint="Type answer"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#9BC4E5"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnSubmitAnswer"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#F2C94C"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="#1E2A3A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panelResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number"
+            android:textColor="#A8D0ED"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvResultNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="234"
+            android:textColor="#FFFFFF"
+            android:textSize="56sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Your answer"
+            android:textColor="#A8D0ED"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvResultAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="234"
+            android:textColor="#FFFFFF"
+            android:textSize="56sp" />
+
+        <TextView
+            android:id="@+id/tvResultLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Level 3"
+            android:textColor="#FFFFFF"
+            android:textSize="74sp" />
+
+        <TextView
+            android:id="@+id/tvResultBest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Best: Level --"
+            android:textColor="#E6F2FB"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnResultAction"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#F2C94C"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="#1E2A3A"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>
